@@ -10,6 +10,7 @@ public class CloudGatewayApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(CloudGatewayApplication.class, args);
+		System.out.println("Cool");
 	}
 
 }
