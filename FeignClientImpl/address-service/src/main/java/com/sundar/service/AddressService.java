@@ -18,8 +18,8 @@ public class AddressService {
 	@Autowired
 	private ModelMapper mapper;
 
-	public AddressResponse findAddressByEmployeeId(Long employeeId) {
-		Optional<Address> addressByEmployeeId = addressRepo.findAddressByEmployeeId(employeeId);
+	public AddressResponse getAddressByEmployeeById(Long employeeId) {
+		Optional<Address> addressByEmployeeId = addressRepo.findById(employeeId);
 		AddressResponse addressResponse = mapper.map(addressByEmployeeId, AddressResponse.class);
 		return addressResponse;
 
